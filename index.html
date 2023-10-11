@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Гант</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css">
+        <link rel="stylesheet" href="http://taitems.github.com/UX-Lab/core/css/prettify.css">
+		<style>
+			body {
+				font-family: Helvetica, Arial, sans-serif;
+				font-size: 13px;
+				padding-bottom: 50px;
+			}
+
+			h1 {
+				margin: 40px 0 20px 0;
+			}
+
+			h2 {
+				font-size: 1.5em;
+				padding-bottom: 3px;
+				border-bottom: 1px solid #DDD;
+				margin-top: 50px;
+				margin-bottom: 25px;
+			}
+
+			table th:first-child {
+				width: 150px;
+			}
+		</style>
+    </head>
+    <body>
+		<div class="contain">
+			<div class="gantt"></div>
+		</div>
+    </body>
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="js/jquery.fn.gantt.js"></script>
+	<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-tooltip.js"></script>
+    <script>
+		$(function() {
+			"use strict";
+
+			const data = [{
+				name: "",
+				desc: "Шапошников Роман",
+				values: [{
+					from: "/Date(1694390400000)/",
+					to: "/Date(1696291200000)/",
+					label: "Requirement Gathering",
+					customClass: "ganttRed"
+				}, {
+						from: "/Date(1688342400000)/",
+						to: "/Date(1691452800000)/",
+						label: "Requirement Gathering",
+						customClass: "ganttRed"
+				}]
+			},{
+				name: "",
+				desc: "Scoping",
+				values: [{
+					from: "/Date(1322611200000)/",
+					to: "/Date(1323302400000)/",
+					label: "Scoping",
+					customClass: "ganttRed"
+				}]
+			},{
+				name: "",
+				desc: "Development",
+				values: [{
+					from: "/Date(1323802400000)/",
+					to: "/Date(1325685200000)/",
+					label: "Development",
+					customClass: "ganttGreen"
+				}]
+			},{
+				name: "",
+				desc: "Showcasing",
+				values: [{
+					from: "/Date(1325685200000)/",
+					to: "/Date(1325695200000)/",
+					label: "Showcasing",
+					customClass: "ganttBlue"
+				}]
+			},{
+				name: "",
+				desc: "Development",
+				values: [{
+					from: "/Date(1326785200000)/",
+					to: "/Date(1325785200000)/",
+					label: "Development",
+					customClass: "ganttGreen"
+				}]
+			},{
+				name: "",
+				desc: "Showcasing",
+				values: [{
+					from: "/Date(1328785200000)/",
+					to: "/Date(1328905200000)/",
+					label: "Showcasing",
+					customClass: "ganttBlue"
+				}]
+			},{
+				name: "",
+				desc: "Training",
+				values: [{
+					from: "/Date(1330011200000)/",
+					to: "/Date(1336611200000)/",
+					label: "Training",
+					customClass: "ganttOrange"
+				}]
+			},{
+				name: "",
+				desc: "Deployment",
+				values: [{
+					from: "/Date(1336611200000)/",
+					to: "/Date(1338711200000)/",
+					label: "Deployment",
+					customClass: "ganttOrange"
+				}]
+			},{
+				name: "",
+				desc: "Warranty Period",
+				values: [{
+					from: "/Date(1336611200000)/",
+					to: "/Date(1697027931069)/",
+					label: "Warranty Period",
+					customClass: "ganttOrange"
+				}]
+			}];
+
+			$(".gantt").gantt({
+				source: data,
+				scale: "weeks",
+				maxScale: "months",
+				minScale: "days",
+				itemsPerPage: 10,
+				/*onItemClick: function(data) {
+					alert("Item clicked - show some details");
+				},
+				onAddClick: function(dt, rowId) {
+					alert("Empty space clicked - add an item!");
+				},
+				onRender: function() {
+					if (window.console && typeof console.log === "function") {
+						console.log("chart rendered");
+					}
+				}*/
+			});
+		});
+    </script>
+</html>
